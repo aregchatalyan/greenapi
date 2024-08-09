@@ -1,0 +1,44 @@
+<h1> Green-API</h1>
+
+<div class="buttons-column">
+  <form action="/handle_action" method="post">
+    <label for="instance">Instance ID:</label>
+    <input type="text" name="instance" value="{{instance}}">
+
+    <label for="token">API Token:</label>
+    <input type="text" name="token" value="{{token}}">
+
+    <br><br><br>
+
+    <input type="submit" name="action" value="GetSettings">
+    <input type="submit" name="action" value="GetStateInstance">
+
+    <br><br><br>
+
+    <label for="phone1">Phone Number:</label>
+    <input type="int" name="phone1" value="{{phone1}}">
+
+    <label for="message">Message:</label>
+    <input type="text" name="message" value="{{message}}">
+    <input type="submit" name="action" value="SendMessage">
+
+    <br><br><br>
+
+    <label for="phone2">Phone Number:</label>
+    <input type="int" name="phone2" value="{{phone2}}">
+    <label for="file">File URL:</label>
+    <input type="text" name="file" value="{{file}}">
+    <input type="submit" name="action" value="SendFileByUrl">
+  </form>
+</div>
+
+<div class="results-column">
+{{#if result}}
+    <label>Response:</label>
+    <div class="results-window">
+      <p>{{result}}</p>
+    </div>
+  </div>
+{{/if}}
+
+<div style="clear:both;"></div>
